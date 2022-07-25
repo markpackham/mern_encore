@@ -3,8 +3,10 @@ const Workout = require("../models/WorkoutModel");
 
 const router = express.Router();
 
-router.get("/", (req, res) => {
-  res.json({ mssg: "GET all workouts" });
+router.get("/", async (req, res) => {
+  const workouts = await Workout.find({}).sort({ createdAt: -1 });
+
+  res.status(200).json(workouts);
 });
 
 router.get("/:id", (req, res) => {
@@ -13,6 +15,7 @@ router.get("/:id", (req, res) => {
 
 router.post("/", async (req, res) => {
   const { title, load, reps } = req.body;
+
   try {
     const workout = await Workout.create({ title, load, reps });
     res.status(200).json(workout);
