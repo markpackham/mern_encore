@@ -35,23 +35,23 @@ const WorkoutForm = () => {
 
   return (
     <form className="create" onSubmit={handleSubmit}>
-      <h3>Add a New Workout</h3>
+      <h2>Add a New Workout</h2>
 
-      <label>Excersize Title:</label>
+      <h3>Excersize Title:</h3>
       <input
         type="text"
         onChange={(e) => setTitle(e.target.value)}
         value={title}
       />
 
-      <label>Load (in kg):</label>
+      <h3>Load (in kg):</h3>
       <input
         type="number"
         onChange={(e) => setLoad(e.target.value)}
         value={load}
       />
 
-      <lablel>Number of Reps:</lablel>
+      <h3>Number of Reps:</h3>
       <input
         type="number"
         onChange={(e) => setReps(e.target.value)}
