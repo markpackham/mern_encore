@@ -27,7 +27,9 @@ const WorkoutDetails = ({ workout }) => {
         {workout.reps}
       </p>
       <p>{workout.createdAt}</p>
-      <button onClick={handleClick}>Delete</button>
+      <button onClick={handleClick}>
+        Delete <i class="fa-solid fa-trash"></i>
+      </button>
     </div>
   );
 };
