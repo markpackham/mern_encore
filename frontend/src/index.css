@@ -37,6 +37,16 @@ header a {
   margin: 0 auto;
 }
 
+button {
+  background: var(--error);
+  border: 0;
+  color: #fff;
+  padding: 10px;
+  font-family: "Poppins";
+  border-radius: 4px;
+  cursor: pointer;
+}
+
 /* homepage */
 .home {
   display: grid;
@@ -113,8 +123,6 @@ div.error {
 input.error {
   border: 1px solid var(--error);
 }
-
-
 
 @media (max-width: 768px) {
   .home {
